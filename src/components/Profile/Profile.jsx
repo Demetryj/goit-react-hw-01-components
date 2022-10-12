@@ -10,7 +10,7 @@ export const Profile = ({
   return (
     <div className="profile">
       <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" width={250} />
+        <img src={avatar} alt="User avatar" className="avatar" width={200} />
         <p className="name">{`${userName}`}</p>
         <p className="tag">{`@${tag}`}</p>
         <p className="location">{`${location}`}</p>
