@@ -7,7 +7,7 @@ export const FriendListItem = ({ dataOfFriends }) => {
       <li key={id} className="item">
         <Status isOnline={isOnline}></Status>
         <img className="avatar" src={avatar} alt="User avatar" width="75" />
-        <NameFriend className="name">{name}</NameFriend>
+        <NameFriend>{name}</NameFriend>
       </li>
     );
   });
