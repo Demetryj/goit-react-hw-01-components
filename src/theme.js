@@ -6,6 +6,7 @@ export const theme = {
     background: 'rgba(0, 159, 170, 0.493)',
     accent: 'rgba(37, 40, 239, 0.685)',
     red: '#f00',
+    white: 'white',
   },
 
   spase: [0, 2, 4, 8, 16, 32, 64, 128, 256],

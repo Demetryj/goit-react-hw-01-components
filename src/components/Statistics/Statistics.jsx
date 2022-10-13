@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { Title, Percentage, Label } from './StyledStatistics';
 
 export const Statistics = ({ stats, title = null }) => {
   return (
     <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+      {title && <Title>{title}</Title>}
       {/* если компонент ожидает
       какое-то значение, а его не передали? - при обращении к свойству объекта
   props, получим undefined.*/}
@@ -11,8 +12,8 @@ export const Statistics = ({ stats, title = null }) => {
         {stats.map(element => {
           return (
             <li key={element.id} className="item">
-              <span className="label">{element.label}</span>
-              <span className="percentage">{element.percentage}%</span>
+              <Label>{element.label}</Label>
+              <Percentage>{element.percentage}%</Percentage>
             </li>
           );
         })}
