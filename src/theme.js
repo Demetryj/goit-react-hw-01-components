@@ -7,6 +7,7 @@ export const theme = {
     accent: 'rgba(37, 40, 239, 0.685)',
     red: '#f00',
     white: 'white',
+    green: 'green',
   },
 
   spase: [0, 2, 4, 8, 16, 32, 64, 128, 256],
