@@ -6,10 +6,11 @@ import user from '../user';
 import data from '../data';
 import friends from '../friends';
 import transactions from '../transactions';
+import { Box } from './Box';
 
 export const App = () => {
   return (
-    <div>
+    <Box p={[4]} bg="backgroundBody">
       <Profile
         userName={user.username}
         tag={user.tag}
@@ -19,11 +20,12 @@ export const App = () => {
       />
 
       <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
 
       <FriendList friends={friends} />
 
       <TransactionHistory items={transactions} />
-    </div>
+    </Box>
 
     // <div
     //   style={{
