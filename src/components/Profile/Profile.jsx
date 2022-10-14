@@ -12,7 +12,7 @@ export const Profile = ({
   return (
     <Box
       mx="auto"
-      mb={[6]}
+      mb={[7]}
       width="300px"
       bg="white"
       borderRadius="normal"
@@ -33,7 +33,6 @@ export const Profile = ({
 
       <Box
         display="flex"
-        // justifyContent="space-around"
         borderTop="normal"
         borderTopColor="borderColor"
         bg="backgroundStat"
@@ -46,6 +45,7 @@ export const Profile = ({
           flexDirection="column"
           width="100px"
           py={[4]}
+          borderRight="normal"
           borderRightColor="borderColor"
           as="li"
         >
