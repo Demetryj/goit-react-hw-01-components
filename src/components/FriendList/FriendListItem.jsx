@@ -19,7 +19,7 @@ export const FriendListItem = ({ dataOfFriends }) => {
         as="li"
       >
         <Status isOnline={isOnline}></Status>
-        <Avatar className="avatar" src={avatar} alt="User avatar" width="75" />
+        <Avatar src={avatar} alt="User avatar" width="75" />
         <NameFriend>{name}</NameFriend>
       </Box>
     );

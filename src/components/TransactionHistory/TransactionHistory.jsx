@@ -1,11 +1,5 @@
 import PropTypes from 'prop-types';
-import {
-  Table,
-  HeadCell,
-  BodyRow,
-  BodyCellType,
-  BodyCell,
-} from './StyledTransactionHistory';
+import { Table, HeadCell, BodyRow, BodyCell } from './StyledTransactionHistory';
 // import { Box } from '../Box';
 
 export const TransactionHistory = ({ items }) => {
