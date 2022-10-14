@@ -9,7 +9,7 @@ export const FriendListItem = ({ dataOfFriends }) => {
         key={id}
         display="flex"
         alignItems="center"
-        mb={[3]}
+        mb={[4]}
         py={[3]}
         px={[4]}
         width={300}

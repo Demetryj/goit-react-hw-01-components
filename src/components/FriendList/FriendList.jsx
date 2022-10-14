@@ -12,7 +12,6 @@ export const FriendList = ({ friends }) => {
       mx="auto"
       mb={[7]}
       pt={[3]}
-      pb={[4]}
       width="350px"
       bg="backgroundMain"
       as="ul"
