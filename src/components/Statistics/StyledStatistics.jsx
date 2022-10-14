@@ -6,6 +6,7 @@ export const Title = styled.h2`
   font-weight: ${props => props.theme.fontWeights.heading};
   line-height: ${props => props.theme.lineHeights.heading};
   color: ${props => props.theme.colors.secondaryText};
+  margin-bottom: ${props => props.theme.space[5]}px;
 
   text-transform: uppercase;
 `;
@@ -15,7 +16,7 @@ export const Label = styled.span`
   font-size: ${props => props.theme.fontSizes.s};
   font-weight: ${props => props.theme.fontWeights.body};
   line-height: ${props => props.theme.lineHeights.body};
-  color: ${props => props.theme.colors.secondaryText};
+  color: ${props => props.theme.colors.white};
 `;
 
 export const Percentage = styled.span`
@@ -23,5 +24,5 @@ export const Percentage = styled.span`
   font-size: ${props => props.theme.fontSizes.m};
   font-weight: ${props => props.theme.fontWeights.bold};
   line-height: ${props => props.theme.lineHeights.body};
-  color: ${props => props.theme.colors.secondaryText};
+  color: ${props => props.theme.colors.white};
 `;

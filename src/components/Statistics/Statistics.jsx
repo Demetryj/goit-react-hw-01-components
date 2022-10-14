@@ -1,24 +1,48 @@
 import PropTypes from 'prop-types';
 import { Title, Percentage, Label } from './StyledStatistics';
+import { Box } from '../Box';
+import { getRandomColor } from '../../utils/getRandomColor';
 
 export const Statistics = ({ stats, title = null }) => {
   return (
-    <section className="statistics">
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      mx="auto"
+      mb={[7]}
+      pt={title ? [5] : [0]}
+      width="400px"
+      bg="backgroundMain"
+      as="section"
+    >
       {title && <Title>{title}</Title>}
       {/* если компонент ожидает
       какое-то значение, а его не передали? - при обращении к свойству объекта
   props, получим undefined.*/}
-      <ul className="stat-list">
+      <Box display="flex" as="ul">
         {stats.map(element => {
           return (
-            <li key={element.id} className="item">
+            <Box
+              key={element.id}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              width={400 / 5}
+              pt={[2]}
+              pb={[3]}
+              bg={getRandomColor()}
+              as="li"
+            >
               <Label>{element.label}</Label>
               <Percentage>{element.percentage}%</Percentage>
-            </li>
+            </Box>
           );
         })}
-      </ul>
-    </section>
+      </Box>
+    </Box>
   );
 };
 
