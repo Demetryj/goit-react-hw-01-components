@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { Name, Tag, Location, Label, Quantity } from './StyledProfile';
+import { Avatar, Name, Tag, Location, Label, Quantity } from './StyledProfile';
+import { Box } from '../Box';
 
 export const Profile = ({
   userName,
@@ -9,29 +10,76 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" width={150} />
+    <Box
+      mx="auto"
+      mb={[6]}
+      width="300px"
+      bg="white"
+      borderRadius="normal"
+      boxShadow="first"
+    >
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        flexDirection="column"
+        py={[5]}
+      >
+        <Avatar src={avatar} alt="User avatar" className="avatar" width={150} />
         <Name>{`${userName}`}</Name>
         <Tag>{`@${tag}`}</Tag>
         <Location>{`${location}`}</Location>
-      </div>
+      </Box>
 
-      <ul className="stats">
-        <li>
+      <Box
+        display="flex"
+        // justifyContent="space-around"
+        borderTop="normal"
+        borderTopColor="borderColor"
+        bg="backgroundStat"
+        as="ul"
+      >
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          width="100px"
+          py={[4]}
+          borderRightColor="borderColor"
+          as="li"
+        >
           <Label>Followers</Label>
           <Quantity className="quantity">{`${followers}`}</Quantity>
-        </li>
-        <li>
+        </Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          width="100px"
+          py={[4]}
+          borderRight="normal"
+          borderRightColor="borderColor"
+          as="li"
+        >
           <Label className="label">Views</Label>
           <Quantity className="quantity">{`${views}`}</Quantity>
-        </li>
-        <li>
+        </Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+          width="100px"
+          py={[4]}
+          as="li"
+        >
           <Label className="label">Likes</Label>
           <Quantity className="quantity">{`${likes}`}</Quantity>
-        </li>
-      </ul>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
