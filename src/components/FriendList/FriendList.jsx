@@ -1,12 +1,24 @@
 import PropTypes from 'prop-types';
+import { Box } from '../Box';
 
 import { FriendListItem } from './FriendListItem';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <Box
+      display="flex"
+      alignItems="center"
+      flexDirection="column"
+      mx="auto"
+      mb={[7]}
+      pt={[3]}
+      pb={[4]}
+      width="350px"
+      bg="backgroundMain"
+      as="ul"
+    >
       <FriendListItem dataOfFriends={friends} />
-    </ul>
+    </Box>
   );
 };
 
