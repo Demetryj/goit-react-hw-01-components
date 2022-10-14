@@ -10,7 +10,7 @@ export const theme = {
     red: '#f00',
     white: 'white',
     green: 'green',
-    borderColor: 'rgba(159, 213, 217, 0.52)',
+    borderColor: 'rgba(174, 196, 198, 0.52)',
   },
 
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
