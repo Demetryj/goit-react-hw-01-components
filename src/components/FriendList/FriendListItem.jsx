@@ -3,13 +3,13 @@ import { Status, NameFriend, Avatar } from './StyledFriendListItem';
 import { Box } from '../Box';
 
 export const FriendListItem = ({ dataOfFriends }) => {
-  return dataOfFriends.map(({ avatar, name, isOnline, id }) => {
+  return dataOfFriends.map(({ avatar, name, isOnline, id }, index) => {
     return (
       <Box
         key={id}
         display="flex"
         alignItems="center"
-        mb={[4]}
+        mb={index === dataOfFriends.length - 1 ? [0] : [4]}
         py={[3]}
         px={[4]}
         width={300}

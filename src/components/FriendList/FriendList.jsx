@@ -11,7 +11,7 @@ export const FriendList = ({ friends }) => {
       flexDirection="column"
       mx="auto"
       mb={[7]}
-      pt={[3]}
+      py={[4]}
       width="350px"
       bg="backgroundMain"
       as="ul"
