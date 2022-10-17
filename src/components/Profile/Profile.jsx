@@ -1,5 +1,15 @@
 import PropTypes from 'prop-types';
-import { Avatar, Name, Tag, Location, Label, Quantity } from './StyledProfile';
+import {
+  Card,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  List,
+  Item,
+  Label,
+  Quantity,
+} from './StyledProfile';
 import { Box } from '../Box';
 
 export const Profile = ({
@@ -18,67 +28,27 @@ export const Profile = ({
       borderRadius="normal"
       boxShadow="first"
     >
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        py={[5]}
-      >
+      <Card>
         <Avatar src={avatar} alt="User avatar" className="avatar" width={150} />
         <Name>{`${userName}`}</Name>
         <Tag>{`@${tag}`}</Tag>
         <Location>{`${location}`}</Location>
-      </Box>
+      </Card>
 
-      <Box
-        display="flex"
-        borderTop="normal"
-        borderTopColor="borderColor"
-        bg="backgroundStat"
-        as="ul"
-      >
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          width="100px"
-          py={[4]}
-          borderRight="normal"
-          borderRightColor="borderColor"
-          as="li"
-        >
+      <List>
+        <Item>
           <Label>Followers</Label>
           <Quantity className="quantity">{`${followers}`}</Quantity>
-        </Box>
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          width="100px"
-          py={[4]}
-          borderRight="normal"
-          borderRightColor="borderColor"
-          as="li"
-        >
+        </Item>
+        <Item>
           <Label className="label">Views</Label>
           <Quantity className="quantity">{`${views}`}</Quantity>
-        </Box>
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-          width="100px"
-          py={[4]}
-          as="li"
-        >
+        </Item>
+        <Item>
           <Label className="label">Likes</Label>
           <Quantity className="quantity">{`${likes}`}</Quantity>
-        </Box>
-      </Box>
+        </Item>
+      </List>
     </Box>
   );
 };
