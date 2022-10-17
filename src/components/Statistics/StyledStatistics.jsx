@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 
+export const List = styled.ul`
+  display: flex;
+`;
+
+export const Item = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(400px / 5);
+  padding-top: ${props => props.theme.space[2]}px;
+  padding-bottom: ${props => props.theme.space[3]}px;
+  background-color: ${props => props.theme.getRandomColor()};
+`;
+
 export const Title = styled.h2`
   font-family: ${props => props.theme.fonts.heading};
   font-size: ${props => props.theme.fontSizes.m};

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-import { Title, Percentage, Label } from './StyledStatistics';
+import { List, Item, Title, Percentage, Label } from './StyledStatistics';
 import { Box } from '../Box';
-import { getRandomColor } from '../../utils/getRandomColor';
 
 export const Statistics = ({ stats, title = null }) => {
   return (
@@ -21,27 +20,16 @@ export const Statistics = ({ stats, title = null }) => {
       {/* если компонент ожидает
       какое-то значение, а его не передали? - при обращении к свойству объекта
   props, получим undefined.*/}
-      <Box display="flex" as="ul">
+      <List>
         {stats.map(element => {
           return (
-            <Box
-              key={element.id}
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
-              width={400 / 5}
-              pt={[2]}
-              pb={[3]}
-              bg={getRandomColor()}
-              as="li"
-            >
+            <Item key={element.id}>
               <Label>{element.label}</Label>
               <Percentage>{element.percentage}%</Percentage>
-            </Box>
+            </Item>
           );
         })}
-      </Box>
+      </List>
     </Box>
   );
 };
