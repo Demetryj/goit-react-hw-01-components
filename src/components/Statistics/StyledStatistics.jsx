@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomColor } from '../../utils/getRandomColor';
 
 export const List = styled.ul`
   display: flex;
@@ -12,7 +13,7 @@ export const Item = styled.li`
   width: calc(400px / 5);
   padding-top: ${props => props.theme.space[2]}px;
   padding-bottom: ${props => props.theme.space[3]}px;
-  background-color: ${props => props.theme.getRandomColor()};
+  background-color: ${getRandomColor};
 `;
 
 export const Title = styled.h2`
